@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perulangan Ayam Mati 10</title>
+</head>
+<body>
+    <button onclick="window.location.href = 'index.html'">Kembali</button>
+    <h1>Perulangan Anak Ayam</h1>
+    <button onclick="mulai()">Mulai</button>
+    <p id="hasilLagu"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<script>
+    function mulai() {
+    var anakAyam = 10;
+    var hasilLagu = "";
+
+    while (anakAyam > 0) {
+        hasilLagu += "Anak ayam turun " + anakAyam + ", mati satu tinggalah " + (anakAyam - 1) + "<br>";
+        anakAyam--;
+    }
+
+    document.getElementById("hasilLagu").innerHTML = hasilLagu;
+}
+
+</script>

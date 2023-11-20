@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="window.location.href = 'index.html'">Kembali</button>
+    <div class="container">
+        <h2>Program Kasir</h2>
+        <form id="kasirForm">
+            <label for="kodeBarang">Kode Barang:</label>
+            <input type="text" id="kodeBarang" required>
+
+            <label for="namaBarang">Nama Barang:</label>
+            <input type="text" id="namaBarang" required>
+
+            <label for="hargaBarang">Harga Barang:</label>
+            <input type="number" id="hargaBarang" required>
+
+            <label for="jumlahBarang">Jumlah Barang:</label>
+            <input type="number" id="jumlahBarang" required>
+
+            <button type="button" onclick="hitungTotal()">Hitung Total</button>
+        </form>
+
+        <div id="hasil" class="hidden">
+            <h3>Informasi Barang:</h3>
+            <p id="infoBarang"></p>
+        </div>
+    </div>
+
+    <script>
+        function hitungTotal() {
+    // Ambil nilai dari input form
+    var kodeBarang = document.getElementById("kodeBarang").value;
+    var namaBarang = document.getElementById("namaBarang").value;
+    var hargaBarang = parseFloat(document.getElementById("hargaBarang").value);
+    var jumlahBarang = parseInt(document.getElementById("jumlahBarang").value);
+
+    var totalHarga = hargaBarang * jumlahBarang;
+
+    // Tampilkan informasi barang
+    var infoBarang = `Kode Barang: ${kodeBarang}<br>
+                      Nama Barang: ${namaBarang}<br>
+                       Harga Barang: ${hargaBarang}<br>
+                      Jumlah Barang: ${jumlahBarang}<br>
+                      Total Harga: ${totalHarga}`;
+
+    document.getElementById("infoBarang").innerHTML = infoBarang;
+
+    // Tampilkan hasil
+    document.getElementById("hasil").classList.remove("hidden");
+
+}
+
+    </script>
+
+<form action="index.html">
+    <button type="submit">
+        kembali
+    </button>
+</form>
+
+</body>
+</html>
+
+no 5

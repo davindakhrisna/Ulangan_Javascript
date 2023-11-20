@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keliling Trapesium</title>
+</head>
+<body>
+    <button onclick="window.location.href = 'index.html'">Kembali</button>
+    <h1>Kalkulator Keliling Trapesium</h1>
+    <label for="sisiA">Masukkan panjang sisi A: </label>
+    <input type="number" id="sisiA"><br><br>
+
+    <label for="sisiB">Masukkan panjang sisi B: </label>
+    <input type="number" id="sisiB"><br><br>
+
+    <label for="sisiC">Masukkan panjang sisi C: </label>
+    <input type="number" id="sisiC"><br><br>
+
+    <label for="sisiD">Masukkan panjang sisi D: </label>
+    <input type="number" id="sisiD"><br><br>
+
+    <button onclick="hitungKeliling()">Hitung Keliling</button><br><br>
+
+    <p id="hasilKeliling"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<script>
+    function hitungKeliling() {
+    var sisiA = parseFloat(document.getElementById("sisiA").value);
+    var sisiB = parseFloat(document.getElementById("sisiB").value);
+    var sisiC = parseFloat(document.getElementById("sisiC").value);
+    var sisiD = parseFloat(document.getElementById("sisiD").value);
+
+    var keliling = sisiA + sisiB + sisiC + sisiD;
+
+    document.getElementById("hasilKeliling").innerHTML = "Keliling trapesium adalah: " + keliling;
+}
+</script>
